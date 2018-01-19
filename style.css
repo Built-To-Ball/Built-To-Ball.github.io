@@ -20,15 +20,6 @@ body {
     max-width: 1050px;
 }
 
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 3px solid rgb(187, 119, 31);
-    margin: 1em 0;
-    padding: 0;
-}
-
 h1 {
     font-size: 6em;
     font-weight: 800;
@@ -64,7 +55,7 @@ a {
 
 #content {
     z-index: 1;
-    padding: 100px 0 0 0;
+    padding: 110px 0 0 0;
     max-width: 650px;
     margin-bottom: 5%;
 }
@@ -81,6 +72,7 @@ a {
 
 #title h2 {
     margin-top: 10px;
+    margin-left: -30px;
 }
 
 /* LOGO / HEADER */
@@ -92,6 +84,7 @@ a {
     background: white;
     height: 100px;
     border-bottom: rgb(187, 119, 31) solid 3px;
+    margin-left: -35px;
 }
 
 #logo span {
@@ -119,10 +112,10 @@ a {
 /* Submit Button */
 
 .link {
-    width: 100%;
+    width: 50vw;
     height: auto;
     border: rgb(187, 119, 31) solid 2px;
-    font-size: 3em;
+    font-size: 1.5vw;
     background: 0 0;
     padding: 1em;
     letter-spacing: .1em;
@@ -149,6 +142,9 @@ a {
     margin-top: 5%;
     text-align: right;
     color: rgb(0, 0, 0);
+    border-top: rgb(187, 119, 31) solid 3px;
+    margin-left: -3vw;
+    padding-top: 10px;
 }
 
 #blog a {
