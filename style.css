@@ -8,7 +8,7 @@
 /* Main */
 
 :root {
-    --primary_color: #fa0;
+    --primary_color: black;
 }
 
 
@@ -24,7 +24,7 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 3px solid rgb(51, 34, 0);
+    border-top: 3px solid rgb(187, 119, 31);
     margin: 1em 0;
     padding: 0;
 }
@@ -40,17 +40,22 @@ h2 {
     font-size: 2em;
     font-weight: 300;
     margin-top: 2em;
-    color: rgb(206, 137, 0);
+    color: rgb(26, 17, 0);
 }
 
 p {
     font-size: 1.5em;
     font-weight: 200;
-    color: rgb(153, 102, 0);
+    color: rgb(56, 37, 0);
 }
 
 ul {
     font-size: 1.4em;
+}
+
+a {
+    color: var(--primary_color) !important;
+    text-decoration: none;
 }
 
 #body {
@@ -59,13 +64,13 @@ ul {
 
 #content {
     z-index: 1;
-    padding: 125px 0 0 0;
+    padding: 100px 0 0 0;
     max-width: 650px;
     margin-bottom: 5%;
 }
 
 #intro {
-    margin-top: 5em;
+    margin-top: 3em;
     margin-bottom: 5em;
     text-align: left;
 }
@@ -75,7 +80,7 @@ ul {
 }
 
 #title h2 {
-    margin-top: 0;
+    margin-top: 10px;
 }
 
 /* LOGO / HEADER */
@@ -85,13 +90,29 @@ ul {
     width: 75vw;
     z-index: 10;
     background: white;
-    height: 125px;
+    height: 100px;
+    border-bottom: rgb(187, 119, 31) solid 3px;
 }
 
 #logo span {
     position: absolute;
     bottom: 0;
     width: 100%;
+    text-align: right;
+    height: 50px;
+}
+
+#logo img {
+    margin-bottom: 10px;
+}
+
+.header-title {
+    font-size: 3em;
+    width: 50%;
+    text-align: left;
+    float: left;
+    overflow: hidden;
+    margin-top: 10px; 
 }
 
 /* BUTTON LINKS TO ARTICLES */
@@ -100,7 +121,7 @@ ul {
 .link {
     width: 100%;
     height: auto;
-    border: var(--primary_color) solid 2px;
+    border: rgb(187, 119, 31) solid 2px;
     font-size: 3em;
     background: 0 0;
     padding: 1em;
@@ -109,20 +130,14 @@ ul {
     margin-bottom: 20px;
     text-align: center;
     vertical-align: middle;
+    border-radius: 10px;
 }
 
 .link:hover, .link:hover a {
-    opacity: .6;
-    background: var(--primary_color);
-    color: #000 !important;
+    opacity: .8;
+    background: rgb(187, 119, 31);
+    color: #fff !important;
 }
-
-a {
-    color: var(--primary_color) !important;
-    text-decoration: none;
-}
-
-
 
 /* BLOG LINKS / FOOTER */
 
@@ -133,5 +148,9 @@ a {
     bottom: 5%;
     margin-top: 5%;
     text-align: right;
-    color: rgb(153, 102, 0);
+    color: rgb(0, 0, 0);
+}
+
+#blog a {
+    text-decoration: underline;
 }
