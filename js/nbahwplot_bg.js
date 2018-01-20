@@ -60,12 +60,12 @@ function animate() {
 }
 
 function fillDots() {
-    d3.select("#nbahwbg-SVG").style("background", "#BB771F");
+    d3.select("#nbahwbg-SVG").style("background", "#fff");
     d3.select(".link-title-nbahw").style("fill", "#000");
     d3.select(".link-desc-nbahw").style("fill", "#000");
     nbahwbgSVG.selectAll(".dot")
-        .attr("stroke", "#fff")
-        .attr("fill", "#BB771F");
+        .attr("stroke", "#000")
+        .attr("fill", "#fff");
 }
 
 function unfillDots() {

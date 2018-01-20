@@ -29,7 +29,8 @@ for (var i = 0; i < 12; i++) {
         .attr("width", 30)
         .attr("height", getRndInteger(20, 100) )
         .attr("fill-opacity", 0.6)
-        .style("fill",  bar_color);
+        .style("fill",  bar_color)
+        .attr("stroke", "#fff");
 }
 
 var titles = heighthistSVG.append("g");
@@ -53,11 +54,11 @@ titles.append("text")
     .text("A Look Into the NBA's Height Trends Over The Past 70 Years");
 
 function fillBars() {
-    d3.select("#heighthist-SVG").style("background", "#BB771F");
+    d3.select("#heighthist-SVG").style("background", "#fff");
     d3.select(".link-title-hhist").style("fill", "#000");
     d3.select(".link-desc-hhist").style("fill", "#000");
     heighthistSVG.selectAll(".bar")
-        .attr("stroke", "#fff")
+        .attr("stroke", "#000")
         .attr("fill-opacity", 0);
 }
 
@@ -67,7 +68,7 @@ function unfillBars() {
     d3.select(".link-desc-hhist").style("fill", "#fff");
     heighthistSVG.selectAll(".bar")
         .style("fill", function(d) { return color(getRndInteger(0, 9)); })
-        .attr("stroke", "none")
+        .attr("stroke", "#fff")
         .attr("fill-opacity", 0.6);
 }
 
