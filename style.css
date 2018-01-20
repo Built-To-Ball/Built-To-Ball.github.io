@@ -109,27 +109,27 @@ a {
 }
 
 /* BUTTON LINKS TO ARTICLES */
-/* Submit Button */
 
-.link {
-    width: 50vw;
-    height: auto;
-    border: rgb(187, 119, 31) solid 2px;
-    font-size: 1.5vw;
-    background: 0 0;
-    padding: 1em;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    text-align: center;
-    vertical-align: middle;
-    border-radius: 10px;
+#nbahwbg-SVG {
+    box-shadow: .5em .5em 2em 0em #888888;
 }
 
-.link:hover, .link:hover a {
-    opacity: .8;
-    background: rgb(187, 119, 31);
-    color: #fff !important;
+#heighthist-SVG {
+    box-shadow: .5em .5em 2em 0em #888888;
+}
+
+.link-title-nbahw {
+    font-size: 2.5em;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.link-desc-nbahw {
+    font-size: 1.5em;
+    letter-spacing: .1em;
+    margin: 0;
 }
 
 /* BLOG LINKS / FOOTER */
