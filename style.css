@@ -11,13 +11,13 @@
     --primary_color: black;
 }
 
-
 body {
     font-family: 'PT Sans', sans-serif;
     font-size: 10px;
     text-align: left;
     margin: 0 0 100px 150px;
     max-width: 1050px;
+    min-width: 650px;
 }
 
 h1 {
@@ -110,15 +110,14 @@ a {
 
 /* BUTTON LINKS TO ARTICLES */
 
-#nbahwbg-SVG {
+#nbahwbg-SVG, #heighthist-SVG  {
     box-shadow: .5em .5em 2em 0em #888888;
+    margin-bottom: 3em;
+    border: rgb(187, 119, 31) solid 3px;
+    border-radius: 10px;
 }
 
-#heighthist-SVG {
-    box-shadow: .5em .5em 2em 0em #888888;
-}
-
-.link-title-nbahw {
+.link-title-nbahw, .link-title-hhist {
     font-size: 2.5em;
     font-weight: 600;
     letter-spacing: .1em;
@@ -126,7 +125,7 @@ a {
     margin: 0;
 }
 
-.link-desc-nbahw {
+.link-desc-nbahw, .link-desc-hhist {
     font-size: 1.5em;
     letter-spacing: .1em;
     margin: 0;
