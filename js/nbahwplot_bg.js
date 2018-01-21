@@ -6,7 +6,7 @@
 
 //Setup SVG size vars
 var width = 650,
-    height = 100;
+    height = 200;
 
 var color = d3.scale.category10();
 
@@ -18,35 +18,35 @@ var nbahwbgSVG = d3.select("#nbahwbg-SVG").append("svg")
     .on("mouseout", unfillDots)
   .append("g");
 
-d3.select("#nbahwbg-SVG").style("background", "#000");
+d3.select("#nbahwbg-SVG").style("background", "#fff");
 
-for (var i = 0; i < 70; i++) {
+for (var i = 0; i < 150; i++) {
     nbahwbgSVG.append("circle")
         .attr("class", "dot")
         .attr("r", 6)
         .attr("cx", getRndInteger(10,640) )
-        .attr("cy", getRndInteger(5,95) )
-        .attr("fill", "#000")
-        .attr("opacity", 0.9)
-        .attr("stroke", color(getRndInteger(0, 9)));
+        .attr("cy", getRndInteger(5,195) )
+        .attr("fill", color(getRndInteger(0, 9)))
+        .attr("opacity", 0.6)
+        .attr("stroke", "#777");
 }
 
 nbahwbgSVG.append("text")
     .attr("class", "link-title-nbahw")
     .attr("x", "50%")
-    .attr("y", 30)
+    .attr("y", 80)
     .attr("dy", ".71em")
     .attr("text-anchor", "middle")
-    .style("fill", "#fff")
+    .style("fill", "#000")
     .text("Height vs Weight");
 
 nbahwbgSVG.append("text")
     .attr("class", "link-desc-nbahw")
     .attr("x", "50%")
-    .attr("y", 70)
+    .attr("y", 120)
     .attr("dy", ".5em")
     .attr("text-anchor", "middle")
-    .style("fill", "#fff")
+    .style("fill", "#000")
     .text("Interactive Plot Of All 4550 Players to Have Ever Played in the NBA");
 
 animate();
@@ -56,19 +56,19 @@ function animate() {
     nbahwbgSVG.selectAll(".dot").transition()
         .duration(function(_) { return getRndInteger(1000, 3000); })
         .attr("cx", function(_) { return getRndInteger(10,640); })
-        .attr("cy", function(_) { return getRndInteger(5,95); });
+        .attr("cy", function(_) { return getRndInteger(5,195); });
 }
 
-function fillDots() {
+function unfillDots() {
     d3.select("#nbahwbg-SVG").style("background", "#fff");
     d3.select(".link-title-nbahw").style("fill", "#000");
     d3.select(".link-desc-nbahw").style("fill", "#000");
     nbahwbgSVG.selectAll(".dot")
-        .attr("stroke", "#000")
-        .attr("fill", "#fff");
+        .attr("stroke", "#777")
+        .attr("fill", function(_) { return color(getRndInteger(0, 9)); });
 }
 
-function unfillDots() {
+function fillDots() {
     d3.select("#nbahwbg-SVG").style("background", "#000");
     d3.select(".link-title-nbahw").style("fill", "#fff");
     d3.select(".link-desc-nbahw").style("fill", "#fff");

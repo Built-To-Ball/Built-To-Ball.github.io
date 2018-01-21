@@ -9,16 +9,16 @@
 
 :root {
     --primary_color: black;
-    --divider_color: #BB771f;
+    --divider_color: rgb(184, 141, 78);
+    --header_color1: rgb(255, 255, 255);
+    --header_color2: rgb(255, 215, 169);
 }
 
 body {
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 10px;
     text-align: left;
-    margin: 0 0 100px 150px;
-    max-width: 1050px;
-    min-width: 650px;
+    margin: 0;
 }
 
 h1 {
@@ -46,12 +46,15 @@ ul {
 }
 
 a {
-    color: var(--primary_color) !important;
     text-decoration: none;
 }
 
 #body {
     position: relative;
+    margin: 0 0 0 150px;
+    min-width: 650px;
+    max-width: 1050px;
+    min-height: calc(100vh - 100px);
 }
 
 #content {
@@ -73,49 +76,52 @@ a {
 
 #title h2 {
     margin-top: 10px;
-    margin-left: -30px;
 }
 
 /* LOGO / HEADER */
 
-#logo {
+#header {
     position: fixed;
-    width: 75vw;
+    width: 100vw;
     z-index: 10;
     background: white;
-    height: 100px;
+    height: 75px;
     border-bottom: var(--divider_color) solid 3px;
-    margin-left: -35px;
     min-width: 750px;
+    background: linear-gradient(to right, var(--header_color1) , var(--header_color2));
 }
 
-#logo span {
+#header span {
     position: absolute;
     bottom: 0;
+    height: 100%;
     width: 100%;
     text-align: right;
-    height: 50px;
 }
 
-#logo img {
-    margin-bottom: 10px;
+#header .logo .icon {
+    width: 35px;
+    height: 35px;
+    fill: #000;
+    margin: 20px 150px 0 0;
 }
 
 .header-title {
-    font-size: 3em;
+    font-size: 2em;
     width: 50%;
     text-align: left;
     float: left;
-    overflow: hidden;
-    margin-top: 10px; 
+    color: #000;
+    margin: 30px 0 0 150px;
 }
 
 /* BUTTON LINKS TO ARTICLES */
 
 #nbahwbg-SVG, #heighthist-SVG  {
-    box-shadow: .5em .5em 2em 0em #888888;
+    box-shadow: .7em 1.5em 3em 0em #888888;
     margin-bottom: 3em;
-    border-radius: 10px;
+    border-radius: 5px;
+    border: #000 solid 2px;
 }
 
 .link-title-nbahw, .link-title-hhist {
@@ -134,24 +140,23 @@ a {
 
 /* BLOG LINKS / FOOTER */
 
-.footer {
-    position: absolute;
-    bottom: 0;
+footer {
+    position: fixed;
+    height: 50px;
+    width: 100vw;
+    background: linear-gradient(to right, var(--header_color1) , var(--header_color2));
 }
 
 #blog {
-    width: 75vw;
     font-size: 1.5em;
-    height: 5%;
     text-align: right;
     color: rgb(0, 0, 0);
     border-top: var(--divider_color) solid 3px;
-    margin-left: -3vw;
-    padding-top: 1%;
-    padding-bottom: 2%;
+    padding: 10px 150px 10px 0;
     min-width: 750px;
 }
 
 #blog a {
+    color: #000 !important;
     text-decoration: underline;
 }
