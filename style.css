@@ -10,8 +10,6 @@
 :root {
     --primary_color: black;
     --divider_color: rgb(0, 0, 0);
-    --header_color1: rgb(204, 204, 204);
-    --header_color2: rgb(204, 204, 204);
 }
 
 body {
@@ -19,9 +17,7 @@ body {
     font-size: 10px;
     text-align: left;
     margin: 0;
-    background: linear-gradient(to right, #fff, rgb(231, 229, 220));
-    background: -moz-linear-gradient(left, #fff, rgb(231, 229, 220));
-    background: -webkit-linear-gradient(left, #fff, rgb(231, 229, 220));
+    background: #fff;
 }
 
 h1 {
@@ -88,7 +84,7 @@ a {
     width: 100vw;
     z-index: 10;
     height: 75px;
-    border-bottom: var(--divider_color) solid 3px;
+    border-bottom: var(--divider_color) solid 2px;
     min-width: 750px;
     background-image: url("hardwood_bg.jpg");
     background-size: contain;
@@ -150,16 +146,14 @@ footer {
     position: fixed;
     height: 50px;
     width: 100vw;
-    background: linear-gradient(to right, var(--header_color1) , var(--header_color2));
-    background: -moz-linear-gradient(left, var(--header_color1) , var(--header_color2));
-    background: -webkit-linear-gradient(left, var(--header_color1) , var(--header_color2));
+    background: #fff;
 }
 
 #blog {
     font-size: 1.5em;
     text-align: right;
     color: rgb(0, 0, 0);
-    border-top: var(--divider_color) solid 3px;
+    border-top: var(--divider_color) solid 2px;
     padding: 10px 150px 10px 0;
     min-width: 750px;
 }
