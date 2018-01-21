@@ -50,17 +50,17 @@ a {
 
 #body {
     position: relative;
-    margin: 0 0 0 150px;
+    margin: 0 0 50px 150px;
     min-width: 650px;
     max-width: 1050px;
-    min-height: calc(100vh - 100px);
+    min-height: calc(100vh - 50px);
+    overflow-y: auto;
 }
 
 #content {
     z-index: 1;
-    padding: 110px 0 0 0;
+    padding: 150px 0 0 0;
     max-width: 650px;
-    margin-bottom: 5%;
 }
 
 #intro {
@@ -83,7 +83,7 @@ a {
     position: fixed;
     width: 100vw;
     z-index: 10;
-    height: 75px;
+    height: 100px;
     border-bottom: var(--divider_color) solid 2px;
     min-width: 750px;
     background-image: url("hardwood_bg.jpg");
@@ -96,6 +96,8 @@ a {
     height: 100%;
     width: 100%;
     text-align: right;
+    display: flex;
+    align-items: center;
     background: linear-gradient(to left, rgba(0,0,0,0.6), rgba(0,0,0,1));
     background: -moz-linear-gradient(right,rgba(0,0,0,0.6), rgba(0,0,0,1));
     background: -webkit-linear-gradient(right,rgba(0,0,0,0.6), rgba(0,0,0,1));
@@ -105,16 +107,16 @@ a {
     width: 25px;
     height: 25px;
     fill: #fff;
-    margin: 27px 150px 0 0;
+    margin:0;
 }
 
 .header-title {
     font-size: 2em;
-    width: 50%;
+    width: 80vw;
     text-align: left;
     float: left;
     color: #fff;
-    margin: 30px 0 0 150px;
+    margin: 0 0 0 150px;
 }
 
 /* BUTTON LINKS TO ARTICLES */
@@ -143,7 +145,7 @@ a {
 /* BLOG LINKS / FOOTER */
 
 footer {
-    position: fixed;
+    position: absolute;
     height: 50px;
     width: 100vw;
     background: #fff;
