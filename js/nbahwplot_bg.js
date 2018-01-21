@@ -5,7 +5,7 @@
 // ----------------------------------------------------
 
 //Setup SVG size vars
-var width = 650,
+var width = "100%",
     height = 200;
 
 var color = d3.scale.category10();
@@ -20,11 +20,11 @@ var nbahwbgSVG = d3.select("#nbahwbg-SVG").append("svg")
 
 d3.select("#nbahwbg-SVG").style("background", "#000");
 
-for (var i = 0; i < 150; i++) {
+for (var i = 0; i < 100; i++) {
     nbahwbgSVG.append("circle")
         .attr("class", "dot")
         .attr("r", 6)
-        .attr("cx", getRndInteger(10,640) )
+        .attr("cx", getRndInteger(10,990) )
         .attr("cy", getRndInteger(5,195) )
         .attr("fill", "#000")
         .attr("opacity", 0.6)
@@ -55,7 +55,7 @@ d3.interval(animate, 3000);
 function animate() {
     nbahwbgSVG.selectAll(".dot").transition()
         .duration(function(_) { return getRndInteger(1000, 3000); })
-        .attr("cx", function(_) { return getRndInteger(10,640); })
+        .attr("cx", function(_) { return getRndInteger(10,990); })
         .attr("cy", function(_) { return getRndInteger(5,195); });
 }
 

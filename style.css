@@ -9,7 +9,7 @@
 
 :root {
     --primary_color: black;
-    --divider_color: rgb(0, 0, 0);
+    --divider_color: rgb(155, 117, 91);
 }
 
 body {
@@ -48,18 +48,17 @@ a {
     text-decoration: none;
 }
 
-#body {
+main {
     position: relative;
-    min-width: 650px;
-    max-width: 1050px;
-    min-height: calc(100vh - 50px);
     overflow-y: auto;
+    min-height: calc(100vh - 50px);
 }
 
 #content {
     z-index: 1;
-    max-width: 650px;
-    margin: 150px 0 50px 150px;
+    width: 650px;
+    min-width: 650px;
+    margin: 100px 0 50px 150px;
 }
 
 #intro {
@@ -78,18 +77,19 @@ a {
 
 /* LOGO / HEADER */
 
-#header {
+header {
     position: fixed;
-    width: 100vw;
+    width: 70vw;
     z-index: 10;
-    height: 100px;
+    height: 75px;
     border-bottom: var(--divider_color) solid 2px;
     min-width: 750px;
-    background-image: url("hardwood_bg.jpg");
-    background-size: contain;
+    background: #fff;
+    margin-left: 150px;
+    min-width: 650px;
 }
 
-#header span {
+header span {
     position: absolute;
     bottom: 0;
     height: 100%;
@@ -97,34 +97,35 @@ a {
     text-align: right;
     display: flex;
     align-items: center;
-    background: linear-gradient(to left, rgba(0,0,0,0.6), rgba(0,0,0,1));
-    background: -moz-linear-gradient(right,rgba(0,0,0,0.6), rgba(0,0,0,1));
-    background: -webkit-linear-gradient(right,rgba(0,0,0,0.6), rgba(0,0,0,1));
 }
 
-#header .logo .icon {
+header .logo .icon {
     width: 25px;
     height: 25px;
-    fill: #fff;
+    fill: #000;
     margin:0;
 }
 
 .header-title {
     font-size: 2em;
-    width: 80vw;
+    width: 65vw;
+    min-width: 600px;
     text-align: left;
     float: left;
-    color: #fff;
-    margin: 0 0 0 150px;
+    color: #000;
 }
 
 /* BUTTON LINKS TO ARTICLES */
 
+#links {
+    width: 70vw;
+    min-width: 650px;
+    max-width: 1000px;
+}
+
 #nbahwbg-SVG, #heighthist-SVG  {
-    box-shadow: .7em 1.5em 3em 0em #888888;
+    box-shadow: 0.8em 1.5em 3em 0em #888888;
     margin-bottom: 3em;
-    border-radius: 5px;
-    border: #000 solid 2px;
 }
 
 .link-title-nbahw, .link-title-hhist {
@@ -146,7 +147,8 @@ a {
 footer {
     position: absolute;
     height: 50px;
-    width: 100vw;
+    width: 70vw;
+    margin-left: 150px;
     background: #fff;
 }
 
@@ -155,7 +157,7 @@ footer {
     text-align: right;
     color: rgb(0, 0, 0);
     border-top: var(--divider_color) solid 2px;
-    padding: 10px 150px 10px 0;
+    padding: 10px 0 10px 0;
     min-width: 750px;
 }
 

@@ -5,7 +5,7 @@
 // ----------------------------------------------------
 
 //Setup SVG size vars
-var w = 650,
+var w = "100%",
     h = 200;
 
 var color = d3.scale.category10();
@@ -15,11 +15,11 @@ var heighthistSVG = d3.select("#heighthist-SVG").append("svg")
     .attr("width", w)
     .attr("height", h)
     .on("mouseover", fillBars)
-    .on("mouseout", unfillBars)
+    .on("mouseout", unfillBars);
 
 d3.select("#heighthist-SVG").style("background", "#fff");
 
-for (var i = 0; i < 12; i++) {
+for (var i = 0; i < 25; i++) {
 
     var bar_color = color(getRndInteger(0, 9));
     heighthistSVG.append("rect")
