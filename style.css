@@ -9,8 +9,8 @@
 
 :root {
     --primary_color: black;
-    --divider_color: rgb(184, 141, 78);
-    --header_color1: rgb(255, 255, 255);
+    --divider_color: rgb(0, 0, 0);
+    --header_color1: rgb(0, 0, 0);
     --header_color2: rgb(255, 215, 169);
 }
 
@@ -19,6 +19,9 @@ body {
     font-size: 10px;
     text-align: left;
     margin: 0;
+    background: linear-gradient(to right, #fff, rgb(231, 229, 220));
+    background: -moz-linear-gradient(left, #fff, rgb(231, 229, 220));
+    background: -webkit-gradient(linear, left top, right top, color-stop(#fff), color-stop(rgb(231, 229, 220)));
 }
 
 h1 {
@@ -84,11 +87,11 @@ a {
     position: fixed;
     width: 100vw;
     z-index: 10;
-    background: white;
     height: 75px;
     border-bottom: var(--divider_color) solid 3px;
     min-width: 750px;
-    background: linear-gradient(to right, var(--header_color1) , var(--header_color2));
+    background-image: url("hardwood_bg.jpg");
+    background-size: contain;
 }
 
 #header span {
@@ -97,12 +100,15 @@ a {
     height: 100%;
     width: 100%;
     text-align: right;
+    background: linear-gradient(to left, rgba(0,0,0,0.6), rgba(0,0,0,1));
+    background: -moz-linear-gradient(right,rgba(0,0,0,0), rgba(0,0,0,1));
+    background: -webkit-gradient(linear, left top, right top, color-stop(rgba(0,0,0,0)), color-stop(rgba(0,0,0,1)));
 }
 
 #header .logo .icon {
     width: 25px;
     height: 25px;
-    fill: #000;
+    fill: #fff;
     margin: 27px 150px 0 0;
 }
 
@@ -111,7 +117,7 @@ a {
     width: 50%;
     text-align: left;
     float: left;
-    color: #000;
+    color: #fff;
     margin: 30px 0 0 150px;
 }
 
