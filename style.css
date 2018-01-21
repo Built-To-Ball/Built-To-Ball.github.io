@@ -50,7 +50,6 @@ a {
 
 #body {
     position: relative;
-    margin: 0 0 50px 150px;
     min-width: 650px;
     max-width: 1050px;
     min-height: calc(100vh - 50px);
@@ -59,8 +58,8 @@ a {
 
 #content {
     z-index: 1;
-    padding: 150px 0 0 0;
     max-width: 650px;
+    margin: 150px 0 50px 150px;
 }
 
 #intro {
