@@ -18,7 +18,7 @@ var nbahwbgSVG = d3.select("#nbahwbg-SVG").append("svg")
     .on("mouseout", unfillDots)
   .append("g");
 
-d3.select("#nbahwbg-SVG").style("background", "#fff");
+d3.select("#nbahwbg-SVG").style("background", "#000");
 
 for (var i = 0; i < 150; i++) {
     nbahwbgSVG.append("circle")
@@ -26,9 +26,9 @@ for (var i = 0; i < 150; i++) {
         .attr("r", 6)
         .attr("cx", getRndInteger(10,640) )
         .attr("cy", getRndInteger(5,195) )
-        .attr("fill", color(getRndInteger(0, 9)))
+        .attr("fill", "#000")
         .attr("opacity", 0.6)
-        .attr("stroke", "#777");
+        .attr("stroke", color(getRndInteger(0, 9)));
 }
 
 nbahwbgSVG.append("text")
@@ -37,7 +37,7 @@ nbahwbgSVG.append("text")
     .attr("y", 80)
     .attr("dy", ".71em")
     .attr("text-anchor", "middle")
-    .style("fill", "#000")
+    .style("fill", "#fff")
     .text("Height vs Weight");
 
 nbahwbgSVG.append("text")
@@ -46,7 +46,7 @@ nbahwbgSVG.append("text")
     .attr("y", 120)
     .attr("dy", ".5em")
     .attr("text-anchor", "middle")
-    .style("fill", "#000")
+    .style("fill", "#fff")
     .text("Interactive Plot Of All 4550 Players to Have Ever Played in the NBA");
 
 animate();
@@ -59,7 +59,7 @@ function animate() {
         .attr("cy", function(_) { return getRndInteger(5,195); });
 }
 
-function unfillDots() {
+function fillDots() {
     d3.select("#nbahwbg-SVG").style("background", "#fff");
     d3.select(".link-title-nbahw").style("fill", "#000");
     d3.select(".link-desc-nbahw").style("fill", "#000");
@@ -68,7 +68,7 @@ function unfillDots() {
         .attr("fill", function(_) { return color(getRndInteger(0, 9)); });
 }
 
-function fillDots() {
+function unfillDots() {
     d3.select("#nbahwbg-SVG").style("background", "#000");
     d3.select(".link-title-nbahw").style("fill", "#fff");
     d3.select(".link-desc-nbahw").style("fill", "#fff");

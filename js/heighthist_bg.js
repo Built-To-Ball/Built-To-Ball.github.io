@@ -58,9 +58,7 @@ function unfillBars() {
     d3.select(".link-title-hhist").style("fill", "#000");
     d3.select(".link-desc-hhist").style("fill", "#000");
     heighthistSVG.selectAll(".bar")
-        .attr("stroke", "#000")
-        .attr("fill-opacity", 0.6)
-        .style("fill", function(d) { return color(getRndInteger(0, 9)); });
+        .attr("stroke", "#000");
 }
 
 function fillBars() {
@@ -68,9 +66,7 @@ function fillBars() {
     d3.select(".link-title-hhist").style("fill", "#fff");
     d3.select(".link-desc-hhist").style("fill", "#fff");
     heighthistSVG.selectAll(".bar")
-        .style("fill", "#000")
-        .attr("stroke", function(d) { return color(getRndInteger(0, 9)); })
-        .attr("fill-opacity", 0);
+        .attr("stroke", "#fff");
 }
 
 animate_bars();
