@@ -10,8 +10,8 @@
 :root {
     --primary_color: black;
     --divider_color: rgb(0, 0, 0);
-    --header_color1: rgb(0, 0, 0);
-    --header_color2: rgb(255, 215, 169);
+    --header_color1: rgb(204, 204, 204);
+    --header_color2: rgb(204, 204, 204);
 }
 
 body {
