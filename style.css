@@ -79,12 +79,11 @@ main {
 
 header {
     position: fixed;
-    width: 70vw;
+    width: 100vw;
     z-index: 10;
     height: 75px;
-    border-bottom: var(--divider_color) solid 2px;
     background: #fff;
-    margin-left: 150px;
+    padding-left: 150px;
     min-width: 650px;
 }
 
@@ -92,10 +91,11 @@ header span {
     position: absolute;
     bottom: 0;
     height: 100%;
-    width: 100%;
+    width: 70vw;
     text-align: right;
     display: flex;
     align-items: center;
+    border-bottom: var(--divider_color) solid 2px;
 }
 
 header .logo .icon {
@@ -147,8 +147,8 @@ footer {
     position: absolute;
     height: 50px;
     width: 70vw;
-    margin-left: 150px;
-    background: #fff;
+    margin: 30vh 0 0 150px;
+    background: #fff; 
 }
 
 #blog {
