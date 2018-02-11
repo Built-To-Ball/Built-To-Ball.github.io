@@ -10,6 +10,8 @@ $( document ).ready(function () {
         height = 200;
 
     var color = d3.scale.category10();
+    var bgColor = "rgb(14, 24, 29)";
+    var fgColor = "#fff";
 
     //Initialize the svg
     var nbahwbgSVG = d3.select("#nbahwbg-SVG").append("svg")
@@ -19,7 +21,7 @@ $( document ).ready(function () {
         .on("mouseout", unfillDots)
     .append("g");
 
-    d3.select("#nbahwbg-SVG").style("background", "#000");
+    d3.select("#nbahwbg-SVG").style("background", bgColor);
 
     for (var i = 0; i < 100; i++) {
         nbahwbgSVG.append("circle")
@@ -27,7 +29,7 @@ $( document ).ready(function () {
             .attr("r", 6)
             .attr("cx", getRndInteger(10,990) )
             .attr("cy", getRndInteger(5,195) )
-            .attr("fill", "#000")
+            .attr("fill", bgColor)
             .attr("opacity", 0.6)
             .attr("stroke", color(getRndInteger(0, 9)));
     }
@@ -38,7 +40,7 @@ $( document ).ready(function () {
         .attr("y", 80)
         .attr("dy", ".71em")
         .attr("text-anchor", "middle")
-        .style("fill", "#fff")
+        .style("fill", fgColor)
         .text("Height vs Weight");
 
     nbahwbgSVG.append("text")
@@ -47,7 +49,7 @@ $( document ).ready(function () {
         .attr("y", 120)
         .attr("dy", ".5em")
         .attr("text-anchor", "middle")
-        .style("fill", "#fff")
+        .style("fill", fgColor)
         .text("Interactive Plot Of All 4550 Players to Have Ever Played in the NBA");
 
     animate();
@@ -61,20 +63,20 @@ $( document ).ready(function () {
     }
 
     function fillDots() {
-        d3.select("#nbahwbg-SVG").style("background", "#fff");
-        d3.select(".link-title-nbahw").style("fill", "#000");
-        d3.select(".link-desc-nbahw").style("fill", "#000");
+        d3.select("#nbahwbg-SVG").transition().duration(500).style("background", fgColor);
+        d3.select(".link-title-nbahw").style("fill", bgColor);
+        d3.select(".link-desc-nbahw").style("fill", bgColor);
         nbahwbgSVG.selectAll(".dot")
             .attr("stroke", "#777")
             .attr("fill", function(_) { return color(getRndInteger(0, 9)); });
     }
 
     function unfillDots() {
-        d3.select("#nbahwbg-SVG").style("background", "#000");
-        d3.select(".link-title-nbahw").style("fill", "#fff");
-        d3.select(".link-desc-nbahw").style("fill", "#fff");
+        d3.select("#nbahwbg-SVG").transition().duration(200).style("background", bgColor);
+        d3.select(".link-title-nbahw").style("fill", fgColor);
+        d3.select(".link-desc-nbahw").style("fill", fgColor);
         nbahwbgSVG.selectAll(".dot")
-            .attr("fill", "#000")
+            .attr("fill", bgColor)
             .attr("stroke", function(_) { return color(getRndInteger(0, 9)); });
     }
 
