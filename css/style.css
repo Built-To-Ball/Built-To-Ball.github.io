@@ -9,7 +9,7 @@
 
 :root {
     --primary_color: black;
-    --divider_color: rgb(155, 117, 91);
+    --divider_color: rgb(181, 157, 80);
 }
 
 body {
@@ -75,46 +75,6 @@ main {
     margin-top: 10px;
 }
 
-/* LOGO / HEADER */
-
-header {
-    position: fixed;
-    height: 75px;
-    width: 100vw;
-    min-width: 650px;
-    z-index: 10;
-    background: #fff;
-}
-
-header span {
-    height: 100%;
-    width: 70%;
-    min-width: 650px;
-    position: absolute;
-    display: flex;
-    bottom: 0;
-    text-align: right;
-    align-items: center;
-    margin-left: 150px;
-    border-bottom: var(--divider_color) solid 2px;
-}
-
-header .logo .icon {
-    width: 25px;
-    height: 25px;
-    fill: #000;
-    margin: 0;
-}
-
-.header-title {
-    font-size: 2em;
-    width: 65vw;
-    min-width: 600px;
-    text-align: left;
-    float: left;
-    color: #000;
-}
-
 /* BUTTON LINKS TO ARTICLES */
 
 #links {
@@ -126,6 +86,7 @@ header .logo .icon {
 #nbahwbg-SVG, #heighthist-SVG  {
     box-shadow: 0.8em 1.5em 3em 0em #888888;
     margin-bottom: 3em;
+    border: var(--divider_color) 1px solid;
 }
 
 .link-title-nbahw, .link-title-hhist {
