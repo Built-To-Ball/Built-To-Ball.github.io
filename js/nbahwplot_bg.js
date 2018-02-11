@@ -23,10 +23,10 @@ $( document ).ready(function () {
 
     d3.select("#nbahwbg-SVG").style("background", bgColor);
 
-    for (var i = 0; i < 100; i++) {
+    for (var i = 0; i < 50; i++) {
         nbahwbgSVG.append("circle")
             .attr("class", "dot")
-            .attr("r", 6)
+            .attr("r", 15)
             .attr("cx", getRndInteger(10,990) )
             .attr("cy", getRndInteger(5,195) )
             .attr("fill", bgColor)
