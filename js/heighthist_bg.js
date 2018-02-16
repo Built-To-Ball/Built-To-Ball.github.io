@@ -20,7 +20,7 @@ $( document ).ready(function () {
         .on("mouseover", fillBars)
         .on("mouseout", unfillBars);
 
-    d3.select("#heighthist-SVG").style("background", fgColor);
+    d3.select("#heighthist-SVG").style("background", bgColor);
 
     for (var i = 0; i < 25; i++) {
 
@@ -33,7 +33,7 @@ $( document ).ready(function () {
             .attr("height", getRndInteger(20, 120) )
             .attr("fill-opacity", 0.6)
             .style("fill", color(getRndInteger(0, 9)))
-            .attr("stroke", "#000");
+            .attr("stroke", "#fff");
     }
 
     var titles = heighthistSVG.append("g");
@@ -44,7 +44,7 @@ $( document ).ready(function () {
         .attr("y", 130)
         .attr("dy", ".71em")
         .attr("text-anchor", "middle")
-        .style("fill", bgColor)
+        .style("fill", fgColor)
         .text("Height History");
 
     titles.append("text")
@@ -53,23 +53,23 @@ $( document ).ready(function () {
         .attr("y", 170)
         .attr("dy", ".5em")
         .attr("text-anchor", "middle")
-        .style("fill", bgColor)
+        .style("fill", fgColor)
         .text("A Look Into the NBA's Height Trends Over The Past 70 Years");
 
     function unfillBars() {
-        d3.select("#heighthist-SVG").transition().duration(200).style("background", fgColor);
-        d3.select(".link-title-hhist").style("fill", bgColor);
-        d3.select(".link-desc-hhist").style("fill", bgColor);
-        heighthistSVG.selectAll(".bar")
-            .attr("stroke", bgColor);
-    }
-
-    function fillBars() {
-        d3.select("#heighthist-SVG").transition().duration(500).style("background", bgColor);
+        d3.select("#heighthist-SVG").transition().duration(200).style("background", bgColor);
         d3.select(".link-title-hhist").style("fill", fgColor);
         d3.select(".link-desc-hhist").style("fill", fgColor);
         heighthistSVG.selectAll(".bar")
             .attr("stroke", fgColor);
+    }
+
+    function fillBars() {
+        d3.select("#heighthist-SVG").transition().duration(500).style("background", fgColor);
+        d3.select(".link-title-hhist").style("fill", bgColor);
+        d3.select(".link-desc-hhist").style("fill", bgColor);
+        heighthistSVG.selectAll(".bar")
+            .attr("stroke", bgColor);
     }
 
     animate_bars();
