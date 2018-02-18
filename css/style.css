@@ -4,137 +4,139 @@
     The main stylesheet 
 */
 
-
 /* Main */
 
 :root {
-    --primary_color: black;
-    --divider_color: rgba(242, 245, 195, 0.3);
-    --main_dark: rgb(14, 24, 29);
-    --main_light: rgb(221, 225, 119);
-    --main_lighter: rgb(242, 245, 195);
-    --main_lighter_faint: rgba(242, 245, 195, 0.6);
-    --main_light2: rgb(202, 206, 97);
+  --primary_color: black;
+  --divider_color: rgba(242, 245, 195, 0.3);
+  --main_dark: rgb(14, 24, 29);
+  --main_light: rgb(221, 225, 119);
+  --main_lighter: rgb(242, 245, 195);
+  --main_lighter_faint: rgba(242, 245, 195, 0.6);
+  --main_light2: rgb(202, 206, 97);
 }
 
 body {
-    font-family: 'Barlow Semi Condensed', sans-serif;
-    font-size: 10px;
-    font-weight: 100;
-    text-align: left;
-    margin: 0;
-    background: var(--main_dark);
-    color: var(--main_lighter);
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 10px;
+  font-weight: 100;
+  text-align: left;
+  margin: 0;
+  background: var(--main_dark);
+  color: var(--main_lighter);
 }
 
 h1 {
-    font-weight: 100;
-    font-size: 6em;
-    margin: 0;
+  font-weight: 100;
+  font-size: 6em;
+  margin: 0;
 }
 
 h2 {
-    font-weight: 100;
-    font-size: 2em;
-    margin-top: 2em;
+  font-weight: 100;
+  font-size: 2em;
+  margin-top: 2em;
 }
 
 p {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5em;
-    font-weight: 200;
-    color: var(--main_lighter_faint);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5em;
+  font-weight: 200;
+  color: var(--main_lighter_faint);
 }
 
 ul {
-    font-size: 1.4em;
+  font-size: 1.4em;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 main {
-    position: relative;
-    overflow-y: auto;
-    min-height: calc(100vh - 50px);
+  position: relative;
+  overflow-y: auto;
+  min-height: calc(100vh - 50px);
 }
 
 #content {
-    z-index: 1;
-    width: 70vw;
-    min-width: 500px;
-    text-align: center;
-    margin: 10vh auto 10vh auto;
+  z-index: 1;
+  width: 70vw;
+  min-width: 500px;
+  text-align: center;
+  margin: 10vh auto 10vh auto;
 }
 
 #intro {
-    margin-top: 3em;
-    margin-bottom: 5em;
+  margin-top: 3em;
+  margin-bottom: 5em;
 }
 
 #intro p {
-    margin: 1em auto 0 auto;
-    font-size: 1.33em;
-    max-width: 750px;
+  margin: 1em auto 0 auto;
+  font-size: 1.33em;
+  max-width: 750px;
 }
 
 #title h2 {
-    margin-top: 10px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+  margin-top: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 /* BUTTON LINKS TO ARTICLES */
 
 #links {
-    width: 70vw;
-    min-width: 650px;
-    max-width: 1000px;
-    margin: 0 auto 0 auto;
+  width: 70vw;
+  min-width: 650px;
+  max-width: 1000px;
+  margin: 0 auto 0 auto;
 }
 
-#nbahwbg-SVG, #heighthist-SVG  {
-    box-shadow: 2em 2em 4em 1em rgba(0,0,0,0.6);
-    margin-bottom: 3em;
-    border: var(--divider_color) 1px solid;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+#nbahwbg-SVG,
+#heighthist-SVG {
+  box-shadow: 2em 2em 4em 1em rgba(0, 0, 0, 0.6);
+  margin-bottom: 3em;
+  border: var(--divider_color) 1px solid;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 
-.link-title-nbahw, .link-title-hhist {
-    font-size: 2.5em;
-    font-weight: 600;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    margin: 0;
+.link-title-nbahw,
+.link-title-hhist {
+  font-size: 2.5em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0;
 }
 
-.link-desc-nbahw, .link-desc-hhist {
-    font-size: 1.5em;
-    letter-spacing: .1em;
-    margin: 0;
+.link-desc-nbahw,
+.link-desc-hhist {
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+  margin: 0;
 }
 
 /* BLOG LINKS / FOOTER */
 
 footer {
-    position: absolute;
-    height: 50px;
-    width: 100%;
+  position: absolute;
+  height: 50px;
+  width: 100%;
 }
 
 #blog {
-    font-size: 1.5em;
-    text-align: right;
-    color: var(--main_lighter_faint);
-    border-top: var(--divider_color) solid 2px;
-    padding: 10px 10vw 10px 0;
-    min-width: 650px;
+  font-size: 1.5em;
+  text-align: right;
+  color: var(--main_lighter_faint);
+  border-top: var(--divider_color) solid 2px;
+  padding: 10px 10vw 10px 0;
+  min-width: 650px;
 }
 
 #blog a {
-    color: var(--main_light) !important;
-    text-decoration: underline;
+  color: var(--main_light) !important;
+  text-decoration: underline;
 }
